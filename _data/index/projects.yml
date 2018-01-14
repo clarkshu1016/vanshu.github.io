@@ -1,12 +1,12 @@
 # projects section data
 # If you don't have language feature(language.yml is empty), ignore "i18n" items
 # Suggest projects' img be located at '/static/assets/img/landing', and edit following img items.
-- name: Jalpc
-  i18n: jalpc
-  gh_user: jarrekk
+- name: PrivacyBox
+  i18n: privacybox
+  gh_user: vanshu
   repo: Jalpc
-  img: /static/assets/img/landing/jekyll.png
-  desc: This project is my project. I use javescript to get repo's information all my repos have only one request.
+  img: /static/assets/img/landing/privacybox_logo.png
+  desc: PrivacyBox keeps your personal photos and videos private by locking them behind an easy-to-use pattern pad, giving you control over who sees what. Your friends, family, and coworkers will be able to look at your public photo gallery, but NOT what is in your PrivacyBox.
 
 - name: Python
   i18n: cpython
@@ -21,15 +21,3 @@
   img: /static/assets/img/landing/google.png
   desc: This is another project.
 
-- name: Google
-  i18n: google
-  url: https://google.com
-  img: /static/assets/img/landing/google.png
-  desc: This is another project.
-
-
-- name: Google
-  i18n: google
-  url: https://google.com
-  img: /static/assets/img/landing/google.png
-  desc: This is another project.
