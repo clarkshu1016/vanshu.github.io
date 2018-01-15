@@ -2,7 +2,7 @@
 layout: post
 title: 关于Volley的日常使用
 date: 2016-03-22
-categories: android
+categories: Android
 tags: [android]
 description: an article about volley
 ---
