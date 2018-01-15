@@ -1,3 +1,13 @@
+---
+layout: post
+title: AMP vs PWA... whats the difference
+date: 2017-11-02
+categories: web
+tags: [web]
+description:
+---
+
+
 ## AMP vs PWA... whats the difference?
 
 AMP delivers pages almost in an instant for users browsing content on the mobile web, which is hugely important on limited or flaky networks. Progressive Web Apps deliver reliable performance for re-visits to sites thanks to Service Workers and allows unprecedented engagement via push notifications and Add To Homescreen.
