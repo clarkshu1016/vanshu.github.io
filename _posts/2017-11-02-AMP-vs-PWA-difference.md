@@ -2,7 +2,7 @@
 layout: post
 title: AMP vs PWA... whats the difference
 date: 2017-11-02
-categories: web
+categories: [WEB]
 tags: [web]
 description:
 ---

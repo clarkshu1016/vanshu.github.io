@@ -2,7 +2,7 @@
 layout: post
 title: Kotlin中使用Dagger2 PART1
 date: 2017-12-11
-categories: Android
+categories: [Android]
 tags: [android]
 description: 
 ---
