@@ -1,16 +1,32 @@
 # careers section data
 # if you don't have language feature(language.yml is empty), ignore "i18n" items
 - name:
+    detail: Shanghai Magic-point information technology Co., Ltd
+    i18n: company_a
+  desc:
+    detail: I worked at Magic-point A as Windows Phone developer & Android Developer
+    i18n: company_a_desc
+  date:
+    detail: Aug. 2011
+    i18n: company_a_date
+  job:
+    detail: Windows Phone developer & Android Developer
+    i18n: company_a_jobdfdf
+  icon: fa-plus-square
+
+
+
+- name:
     detail: Shanghai Typrotech Technology Company
     i18n: company_a
   desc:
-    detail: I worked at Company A as Product Manager & Android Developer
+    detail: I worked at Shanghai Typrotech Technology Company as Product Manager & Android Developer
     i18n: company_a_desc
   date:
     detail: Mar. 2013
     i18n: company_a_date
   job:
-    detail: CTO
+    detail: Product Manager & Android Developer
     i18n: company_a_jobdfdf
   icon: fa-plus-square
 
