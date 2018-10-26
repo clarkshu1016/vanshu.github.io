@@ -6,6 +6,16 @@
   <meta content="{{ site.description }}" name="description">
   <meta name="keywords" content="{{ site.keywords }}">
   <meta name="author" content="{{ site.author.name }}">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-128172477-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'UA-128172477-1');
+  </script>
+
+
   <title>{{ site.title }}</title>
   <!-- favicon -->
   <link rel="shortcut icon" href="{{ "/static/assets/img/favicon.png" | prepend: site.baseurl }}">
