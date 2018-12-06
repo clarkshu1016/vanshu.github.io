@@ -9,7 +9,7 @@ tags: [android,rom,ubuntu]
 icon: icon-mobile-device
 ---
 
-###  [错误一 jack server问题]{https://forum.xda-developers.com/android/software/aosp-cm-los-how-to-fix-jack-server-t3575179}
+### [错误一 jack server问题] (https://forum.xda-developers.com/android/software/aosp-cm-los-how-to-fix-jack-server-t3575179)
 
 ```
 [  0% 3/59149] Ensuring Jack server is installed and started
