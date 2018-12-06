@@ -6,7 +6,7 @@ desc: "Quick test on writing code snippets in a blog post"
 keywords: "android,selinux,ssh"
 categories: [Android]
 tags: [android,selinux,ssh]
-icon: icon-html
+icon: icon-mobile-device
 ---
 
 
