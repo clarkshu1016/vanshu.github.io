@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "android selinux 权限问题"
+title:  "Android selinux 权限问题"
 date:   2018-11-28
 desc: "Quick test on writing code snippets in a blog post"
 keywords: "android,selinux,ssh"
