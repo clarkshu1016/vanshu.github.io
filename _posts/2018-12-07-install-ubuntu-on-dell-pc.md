@@ -4,7 +4,7 @@ title:  "SSH with authentication key instead of password on Linux server"
 date:   2018-12-07
 desc: "SSH with authentication key instead of password on Linux server"
 keywords: "ubuntu,linux,centos"
-categories: [Android]
+categories: [Linux]
 tags: [Linux]
 icon: icon-linux-mint
 ---
