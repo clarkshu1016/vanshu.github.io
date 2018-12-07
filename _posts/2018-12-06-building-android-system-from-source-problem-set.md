@@ -35,9 +35,9 @@ ninja: build stopped: subcommand failed.
 ### 错误二
 #### 解决方法为在make -j4 命令之前执行
 
-```
-root@ubuntu:~/WORKING_DIRECTORY$ export LC_ALL=C
-root@ubuntu:~/WORKING_DIRECTORY$ make -j4
+```sh
+export LC_ALL=C
+make -j4
 ```
 
 
@@ -51,4 +51,19 @@ Aborted (core dumped)
 ninja: build stopped: subcommand failed.
 03:50:56 ninja failed with: exit status 1
 
+```
+
+
+### [错误三 jackserver 内存不足到问题](https://stackoverflow.com/questions/35579646/android-source-code-compile-error-try-increasing-heap-size-with-java-option)
+
+报错信息：
+```
+Android source code compile error: “Try increasing heap size with java option '-Xmx<size>'”
+```
+
+解决方法：
+```
+export JACK_SERVER_VM_ARGUMENTS="-Dfile.encoding=UTF-8 -XX:+TieredCompilation -Xmx4g"
+./prebuilts/sdk/tools/jack-admin kill-server
+./prebuilts/sdk/tools/jack-admin start-server
 ```
