@@ -10,7 +10,7 @@ icon: icon-linux-mint
 ---
 
 * 在客户端机器上生成私钥和公钥,命令为      ```ssh-keygen```
-```bash
+```console
 $ ssh-keygen                          
 Generating public/private rsa key pair.
 Enter file in which to save the key (/Users/root/.ssh/id_rsa):
