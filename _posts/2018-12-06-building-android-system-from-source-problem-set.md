@@ -67,3 +67,9 @@ export JACK_SERVER_VM_ARGUMENTS="-Dfile.encoding=UTF-8 -XX:+TieredCompilation -X
 ./prebuilts/sdk/tools/jack-admin kill-server
 ./prebuilts/sdk/tools/jack-admin start-server
 ```
+
+
+### 如何查看当前源码下载的源码是什么版本代号
+编译的时候从makefile的信息中确实可以看到，另外还可以从git(.repo/manifest.xml)中查询，或者到build/core/version_plaform.mk中去查询plaform_version的定义值
+
+### 默认需要bash进行编译，如果是zsh会报错，从zsh切换回bash直接输入bash命令就可以切换
