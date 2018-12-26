@@ -73,3 +73,28 @@ export JACK_SERVER_VM_ARGUMENTS="-Dfile.encoding=UTF-8 -XX:+TieredCompilation -X
 编译的时候从makefile的信息中确实可以看到，另外还可以从git(.repo/manifest.xml)中查询，或者到build/core/version_plaform.mk中去查询plaform_version的定义值
 
 ### 默认需要bash进行编译，如果是zsh会报错，从zsh切换回bash直接输入bash命令就可以切换
+
+### 编译好后的版本使用fastboot -w flashall
+编译好的img镜像会存储在out/target/product/bullhead
+包括
+* boot.img
+* recovery.img
+* system.img
+* cache.img
+* vendor.img
+
+
+### 增加编译eng版本
+* eng版本自带root版本
+* user版本是product版本
+* userdebug版本是默认没有root，但是可以通过adb开启root
+
+aosp默认的lunch选项，多了一个aosp_angler-eng这个选项。 怎么增加lunch选项呢？因为我的是Nexus 5X 
+```vim
+vim /device/lge/bullhead/vendorsetup.sh
+```
+在其中加入下面这一行：
+```
+add_lunch_combo aosp_bullhead-eng
+```
+需要注意的是eng前面的不是下划线
