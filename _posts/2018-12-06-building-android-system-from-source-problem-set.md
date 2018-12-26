@@ -109,3 +109,24 @@ vim /device/lge/bullhead/vendorsetup.sh
 add_lunch_combo aosp_bullhead-eng
 ```
 需要注意的是eng前面的不是下划线
+
+
+
+### 问题8:默认编译出来的版本是不带vendor.img镜像
+需要下载[android-prepare-vendor](https://github.com/anestisb/android-prepare-vendor)，该脚本会自动从google官方网站去下载镜像文件，然后对镜像文件进行解压生成vendor目录，把vendor目录拷贝到android源码根目录里面,切记需要root权限执行，否则会报错找不到ext4fuse命令找不到
+
+```bash
+sudo ./execute-all.sh --device bullhead --buildID OPM7.181205.001 --output "${BUILD_DIR}/android-prepare-vendor/out/"
+```
+
+把生成好的vendor拷贝到android源码下
+```bash
+sudo cp -r /home/test/android-prepare-vendor/out/bullhead/opm7.181205.001/vendor /home/test/android_8.1.0/
+```
+
+cd ~/android-6.0.1_r62
+更改vender所有权，因为是使用root去执行的execute-all.sh脚本，所以生成的目录所有者归属与root权限,更改root所有组权限为test组
+```bash
+sudo chown -R test:test ./vender
+```
+
