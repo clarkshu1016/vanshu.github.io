@@ -19,9 +19,9 @@ sudo apt-get install gparted
 
 
 
-# 常见错误集
+## 常见错误集
 
-### [错误一 jack server问题](https://forum.xda-developers.com/android/software/aosp-cm-los-how-to-fix-jack-server-t3575179)
+### [错误1 jack server问题](https://forum.xda-developers.com/android/software/aosp-cm-los-how-to-fix-jack-server-t3575179)
 
 ```
 [  0% 3/59149] Ensuring Jack server is installed and started
@@ -31,9 +31,8 @@ Launching Jack server java -XX:MaxJavaStackTraceDepth=-1 -Djava.io.tmpdir=/tmp -
 ninja: build stopped: subcommand failed.
 18:06:07 ninja failed with: exit status 1
 ```
-
-### 错误二
-#### 解决方法为在make -j4 命令之前执行
+### 错误2
+解决方法为在make -j4 命令之前执行
 
 ```sh
 export LC_ALL=C
@@ -54,21 +53,18 @@ ninja: build stopped: subcommand failed.
 ```
 
 
-### [错误三 jackserver 内存不足到问题](https://stackoverflow.com/questions/35579646/android-source-code-compile-error-try-increasing-heap-size-with-java-option)
+### [错误3: jackserver 内存不足到问题](https://stackoverflow.com/questions/35579646/android-source-code-compile-error-try-increasing-heap-size-with-java-option)
 
 报错信息：
 ```
 Android source code compile error: “Try increasing heap size with java option '-Xmx<size>'”
 ```
-
 解决方法：
 ```
 export JACK_SERVER_VM_ARGUMENTS="-Dfile.encoding=UTF-8 -XX:+TieredCompilation -Xmx4g"
 ./prebuilts/sdk/tools/jack-admin kill-server
 ./prebuilts/sdk/tools/jack-admin start-server
 ```
-
-
 ### 问题4:如何查看当前源码下载的源码是什么版本代号
 编译的时候从makefile的信息中确实可以看到，另外还可以从git(.repo/manifest.xml)中查询，或者到build/core/version_plaform.mk中去查询plaform_version的定义值
 
@@ -113,19 +109,18 @@ add_lunch_combo aosp_bullhead-eng
 
 
 ### 问题8:默认编译出来的版本是不带vendor.img镜像
-需要下载[android-prepare-vendor](https://github.com/anestisb/android-prepare-vendor)，该脚本会自动从google官方网站去下载镜像文件，然后对镜像文件进行解压生成vendor目录，把vendor目录拷贝到android源码根目录里面,切记需要root权限执行，否则会报错找不到ext4fuse命令找不到
+> 需要下载[android-prepare-vendor](https://github.com/anestisb/android-prepare-vendor)，该脚本会自动从google官方网站去下载镜像文件，然后对镜像文件进行解压生成vendor目录，把vendor目录拷贝到android源码根目录里面,切记需要root权限执行，否则会报错找不到ext4fuse命令找不到
 
 ```bash
 sudo ./execute-all.sh --device bullhead --buildID OPM7.181205.001 --output "${BUILD_DIR}/android-prepare-vendor/out/"
 ```
 
-把生成好的vendor拷贝到android源码下
+> 把生成好的vendor拷贝到android源码下
 ```bash
 sudo cp -r /home/test/android-prepare-vendor/out/bullhead/opm7.181205.001/vendor /home/test/android_8.1.0/
 ```
 
-cd ~/android-6.0.1_r62
-更改vender所有权，因为是使用root去执行的execute-all.sh脚本，所以生成的目录所有者归属与root权限,更改root所有组权限为test组
+> 更改vender所有权，因为是使用root去执行的execute-all.sh脚本，所以生成的目录所有者归属与root权限,更改root所有组权限为test组
 ```bash
 sudo chown -R test:test ./vender
 ```
