@@ -69,22 +69,33 @@ export JACK_SERVER_VM_ARGUMENTS="-Dfile.encoding=UTF-8 -XX:+TieredCompilation -X
 ```
 
 
-### 如何查看当前源码下载的源码是什么版本代号
+### 问题4:如何查看当前源码下载的源码是什么版本代号
 编译的时候从makefile的信息中确实可以看到，另外还可以从git(.repo/manifest.xml)中查询，或者到build/core/version_plaform.mk中去查询plaform_version的定义值
 
-### 默认需要bash进行编译，如果是zsh会报错，从zsh切换回bash直接输入bash命令就可以切换
+### 问题5:默认需要bash进行编译，如果是zsh会报错，从zsh切换回bash直接输入bash命令就可以切换
 
-### 编译好后的版本使用fastboot -w flashall
+### 问题6:编译好后的版本使用fastboot flashall -w
 编译好的img镜像会存储在out/target/product/bullhead
 包括
-* boot.img
-* recovery.img
-* system.img
-* cache.img
-* vendor.img
+```console
+/out/target/product/bullhead$ ll -a *.img
+-rw-rw-r-- 1 test test  12066816 Dec 26 01:54 boot.img
+-rw-r--r-- 1 test test   5824660 Dec 26 01:49 cache.img
+-rw-rw-r-- 1 test test   7013873 Dec 26 01:54 ramdisk-recovery.img
+-rw-rw-r-- 1 test test   1234466 Dec 26 01:54 ramdisk.img
+-rw-rw-r-- 1 test test  17846272 Dec 26 01:54 recovery.img
+-rw-r--r-- 1 test test 936019604 Dec 26 02:00 system.img
+-rw-r--r-- 1 test test 166260172 Dec 26 01:56 userdata.img
+-rw-r--r-- 1 test test 189996644 Dec 26 01:49 vendor.img
+```
+输入： fastboot flashall -w
+会报错需要设置,没有设置ANDROID_PRODUCT_OUT
+```console
+export ANDROID_PRODUCT_OUT=/home/test/android_8.1.0/out/target/product/bullhead
+```
 
 
-### 增加编译eng版本
+### 问题7:增加编译eng版本
 * eng版本自带root版本
 * user版本是product版本
 * userdebug版本是默认没有root，但是可以通过adb开启root
