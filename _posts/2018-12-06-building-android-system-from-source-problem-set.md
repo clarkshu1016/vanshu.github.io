@@ -125,3 +125,16 @@ sudo cp -r /home/test/android-prepare-vendor/out/bullhead/opm7.181205.001/vendor
 sudo chown -R test:test ./vender
 ```
 
+
+### 问题9:增加自己的app到系统级别app
+* 系统级别的app源码都存在于这两个目录下
+```
+~/android_8.1.0/packages/apps
+~/android_8.1.0/packages/experimental
+```
+如需增加系统内置app，可以先单独编译自己的app
+```
+mmm ./packages/experimental/TestApp/
+```
+编译完后，make snod把新增内容写进system.img
+如果出现make snod编译失败的问题，重新走一边source build/envsetup.sh和lunch
