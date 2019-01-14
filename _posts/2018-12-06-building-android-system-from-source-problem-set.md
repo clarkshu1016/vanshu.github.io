@@ -138,3 +138,15 @@ mmm ./packages/experimental/TestApp/
 ```
 编译完后，make snod把新增内容写进system.img
 如果出现make snod编译失败的问题，重新走一边source build/envsetup.sh和lunch
+
+
+
+### 问题10:修改开机动画位置
+```
+~/android_8.1.0/frameworks/base/cmds/bootanimation
+```
+
+
+### 问题11:make snod把新增apk写进system.img报错
+[How to solve “make: *** No rule to make target `out/target/product/generic/root/file_contexts', needed by `snod'. Stop.”](https://stackoverflow.com/questions/38341523/how-to-solve-make-no-rule-to-make-target-out-target-product-generic-root
+)
