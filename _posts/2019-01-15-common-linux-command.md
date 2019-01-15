@@ -25,3 +25,12 @@ none            100M     0  100M   0% /run/user
 none            466G  423G   44G  91% /vagrant
 ```
 
+* 查看内存&cpu使用情况
+```console
+top
+```
+或者
+```console
+htop
+```
+
