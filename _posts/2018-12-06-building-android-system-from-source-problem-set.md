@@ -153,3 +153,7 @@ mmm ./packages/experimental/TestApp/
 
 ### 问题12：[获取源码的时候出现:When running repo sync error: Exited sync due to fetch errors](https://stackoverflow.com/questions/16085722/when-running-repo-sync-error-exited-sync-due-to-fetch-errors)
 解决方法：repo sync -f
+
+
+### 问题13:[Trying To Install Java 8.. Unable to locate package openjdk-8-jre](https://askubuntu.com/questions/746413/trying-to-install-java-8-unable-to-locate-package-openjdk-8-jre)
+解决方法：把java sdk 下载链接添加到仓库清单里头
