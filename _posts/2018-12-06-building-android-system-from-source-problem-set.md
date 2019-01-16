@@ -98,7 +98,7 @@ export ANDROID_PRODUCT_OUT=/home/test/android_8.1.0/out/target/product/bullhead
 
 aosp默认的lunch选项，多了一个aosp_angler-eng这个选项。 怎么增加lunch选项呢？因为我的是Nexus 5X 
 ```vim
-vim /device/lge/bullhead/vendorsetup.sh
+vim ./device/lge/bullhead/vendorsetup.sh
 ```
 在其中加入下面这一行：
 ```
