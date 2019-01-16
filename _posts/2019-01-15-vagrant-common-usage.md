@@ -14,8 +14,18 @@
 * vagrant box add + box_name
 
 
+
+
 ### **Common Question**
 
 * [vagrant no space left on device](https://stackoverflow.com/questions/31746907/vagrant-no-space-left-on-device)
 
 * [why vagrant](https://www.vagrantup.com/intro/index.html)
+
+* how to backup vagrant box
+    ```
+    vagrant package
+    ```
+    ```
+    vagrant box add pakcage.box  --name ubuntu_box    
+    ```

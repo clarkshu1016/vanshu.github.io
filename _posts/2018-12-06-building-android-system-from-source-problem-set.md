@@ -122,7 +122,7 @@ sudo cp -r /home/test/android-prepare-vendor/out/bullhead/opm7.181205.001/vendor
 
 > 更改vender所有权，因为是使用root去执行的execute-all.sh脚本，所以生成的目录所有者归属与root权限,更改root所有组权限为test组
 ```bash
-sudo chown -R test:test ./vender
+sudo chown -R vagrant:vagrant ./vendor/
 ```
 
 
