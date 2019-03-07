@@ -5,7 +5,7 @@ date:   2018-12-06
 desc: ""
 keywords: "android,rom,jackserver,ubuntu"
 categories: [Android]
-tags: [android,rom,ubuntu]
+tags: [android,rom,ubuntu,AOSP]
 icon: icon-mobile-device
 ---
 # 搭建配置环境+下载android源码
@@ -157,3 +157,14 @@ mmm ./packages/experimental/TestApp/
 
 ### 问题13:[Trying To Install Java 8.. Unable to locate package openjdk-8-jre](https://askubuntu.com/questions/746413/trying-to-install-java-8-unable-to-locate-package-openjdk-8-jre)
 解决方法：把java sdk 下载链接添加到仓库清单里头
+
+
+### 问题14:[如何导入源码到android studio 项目当中](https://stackoverflow.com/questions/16727607/can-we-use-android-studio-for-aosp-development)
+build完成后会在根目录下生成两个文件android.iml和android.ipr
+
+```bash
+ make idegen && development/tools/idegen/idegen.sh
+```
+
+### 问题14:[如何编译lineage os版本的nexus5x rom](https://wiki.lineageos.org/devices/bullhead/build#build-lineageos-and-lineageos-recovery)
+```
