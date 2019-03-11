@@ -167,4 +167,9 @@ build完成后会在根目录下生成两个文件android.iml和android.ipr
 ```
 
 ### 问题14:[如何编译lineage os版本的nexus5x rom](https://wiki.lineageos.org/devices/bullhead/build#build-lineageos-and-lineageos-recovery)
+
+
+### 问题15:lingeage os 编译带su版本,直接输入
+```bash
+export WITH_SU=true
 ```
