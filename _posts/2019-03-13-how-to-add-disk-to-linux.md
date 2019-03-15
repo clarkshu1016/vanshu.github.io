@@ -3,7 +3,7 @@ layout: post
 title: 如何添加移动硬盘挂在到Ubuntu服务器上
 date: 2019-03-13
 categories: [Linux]
-tags: [tcp]d
+tags: [tcp]
 description: 
 ---
 
